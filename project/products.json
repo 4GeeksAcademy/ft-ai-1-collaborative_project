@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": {"en": "Linen Dress", "fr": "Robe en lin"},
+    "desc": {"en": "Lightweight summer dress in natural linen.", "fr": "Robe d'été légère en lin naturel."},
+    "price": 120,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "category": "Dresses"
+  },
+  {
+    "id": 2,
+    "name": {"en": "Wool Coat", "fr": "Manteau en laine"},
+    "desc": {"en": "Classic tailored coat in premium wool.", "fr": "Manteau classique en laine de qualité."},
+    "price": 250,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=400&q=80",
+    "category": "Coats"
+  },
+  {
+    "id": 3,
+    "name": {"en": "Silk Shirt", "fr": "Chemise en soie"},
+    "desc": {"en": "Elegant shirt crafted from pure silk.", "fr": "Chemise élégante en pure soie."},
+    "price": 90,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "category": "Tops"
+  },
+  {
+    "id": 4,
+    "name": {"en": "Cotton Trousers", "fr": "Pantalon en coton"},
+    "desc": {"en": "Comfortable trousers in soft cotton twill.", "fr": "Pantalon confortable en coton doux."},
+    "price": 80,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "category": "Trousers"
+  },
+  {
+    "id": 5,
+    "name": {"en": "Leather Bag", "fr": "Sac en cuir"},
+    "desc": {"en": "Handcrafted leather bag with gold hardware.", "fr": "Sac en cuir fait main avec accessoires dorés."},
+    "price": 180,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": {"en": "Cashmere Scarf", "fr": "Écharpe en cachemire"},
+    "desc": {"en": "Soft cashmere scarf for all seasons.", "fr": "Écharpe douce en cachemire pour toutes les saisons."},
+    "price": 60,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=400&q=80",
+    "category": "Accessories"
+  },
+  {
+    "id": 7,
+    "name": {"en": "Suede Boots", "fr": "Bottes en daim"},
+    "desc": {"en": "Ankle boots in soft brown suede.", "fr": "Bottines en daim marron doux."},
+    "price": 140,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "category": "Shoes"
+  },
+  {
+    "id": 8,
+    "name": {"en": "Straw Hat", "fr": "Chapeau de paille"},
+    "desc": {"en": "Wide-brimmed straw hat for sunny days.", "fr": "Chapeau de paille à large bord pour les journées ensoleillées."},
+    "price": 40,
+    "currency": "EUR",
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=400&h=480&q=80",
+    "category": "Accessories"
+  }
+]
