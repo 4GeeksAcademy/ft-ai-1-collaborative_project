@@ -30,8 +30,20 @@ def serve_dir_directory_index():
 # Serving any other image
 @app.route('/<path:path>', methods=['GET'])
 def serve_any_other_file(path):
-    if not os.path.isfile(os.path.join(static_file_dir, path)):
+    requested_path = os.path.join(static_file_dir, path)
+    project_path = os.path.join(static_file_dir, 'project', path)
+
+    # Support root URLs for files stored under /project.
+    if os.path.isfile(project_path):
+        path = os.path.join('project', path)
+    elif not os.path.isfile(requested_path):
         path = os.path.join(path, 'index.html')
+
+        # Also support /foo/ style routes for directories under /project.
+        project_index = os.path.join(static_file_dir, 'project', path)
+        if os.path.isfile(project_index):
+            path = os.path.join('project', path)
+
     response = send_from_directory(static_file_dir, path)
     response.cache_control.max_age = 0 # avoid cache memory
     return response
