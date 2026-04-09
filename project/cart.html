@@ -21,7 +21,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" /></noscript>
 
   <!-- Compiled Tailwind CSS -->
   <link rel="stylesheet" href="/tailwind/output.css" />
@@ -144,89 +146,89 @@
       <!-- Breadcrumb -->
       <nav aria-label="Fil d'Ariane" class="mb-8">
         <ol class="flex items-center gap-2 text-sm text-stone-500 list-none p-0 m-0" role="list">
-          <li><a href="index.html" class="hover:text-amber-700 transition-colors duration-200" data-i18n-breadcrumb-home>Accueil</a></li>
+          <li><a href="index.html" class="hover:text-amber-700 transition-colors duration-200" data-i18n="breadcrumb.home">Accueil</a></li>
           <li aria-hidden="true" class="text-stone-400">/</li>
-          <li class="text-stone-900 font-medium" aria-current="page" data-i18n-breadcrumb-cart>Mon Panier</li>
+          <li class="text-stone-900 font-medium" aria-current="page" data-i18n="breadcrumb.cart">Mon Panier</li>
         </ol>
       </nav>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Cart Items Section -->
         <section class="lg:col-span-2">
-          <h1 class="font-serif text-3xl sm:text-4xl text-stone-900 mb-8" data-i18n-cart-heading>Mon Panier</h1>
-          <ul class="space-y-6" role="list" data-i18n-cart-aria aria-label="Articles dans le panier">
+          <h1 class="font-serif text-3xl sm:text-4xl text-stone-900 mb-8" data-i18n="cart.heading">Mon Panier</h1>
+          <ul class="space-y-6" role="list" aria-label="Articles dans le panier" data-i18n-attr="aria-label: cart.aria">
             <!-- Cart Item 1 -->
             <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
               <!-- Image -->
               <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-product-alt alt="Chemise blanche classique, taille M, blanc" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product1.alt" alt="Chemise blanche classique, taille M, blanc" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
               </div>
               <!-- Product Info -->
               <div class="min-w-0">
-                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n-product-name>Chemise blanche classique</span>
-                <span class="text-stone-600 text-sm mt-1 block" data-i18n-product-details>Taille : M · Couleur : Blanc</span>
+                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product1.name">Chemise blanche classique</span>
+                <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product1.details">Taille : M · Couleur : Blanc</span>
               </div>
               <!-- Price -->
               <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n-product-price>49&nbsp;€</span>
+                <span class="text-amber-700 font-semibold" data-i18n="cart.product1.price">49&nbsp;€</span>
               </div>
               <!-- Quantity Controls -->
               <div class="flex items-center justify-center">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-decrease aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">2</span>
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-increase aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.increase" aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
                 </div>
               </div>
               <!-- Remove Button -->
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n-remove aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
             <!-- Cart Item 2 -->
             <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
               <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-product-alt alt="Mocassins en cuir parisiens, taille 42, noir" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product2.alt" alt="Mocassins en cuir parisiens, taille 42, noir" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
               </div>
               <div class="min-w-0">
-                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n-product-name>Mocassins en cuir parisiens</span>
-                <span class="text-stone-600 text-sm mt-1 block" data-i18n-product-details>Taille : 42 · Couleur : Noir</span>
+                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product2.name">Mocassins en cuir parisiens</span>
+                <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product2.details">Taille : 42 · Couleur : Noir</span>
               </div>
               <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n-product-price>120&nbsp;€</span>
+                <span class="text-amber-700 font-semibold" data-i18n="cart.product2.price">120&nbsp;€</span>
               </div>
               <div class="flex items-center justify-center">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-decrease aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">1</span>
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-increase aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.increase" aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
                 </div>
               </div>
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n-remove aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
             <!-- Cart Item 3 -->
             <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
               <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-product-alt alt="Pantalon en laine, taille 38, gris" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product3.alt" alt="Pantalon en laine, taille 38, gris" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
               </div>
               <div class="min-w-0">
-                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n-product-name>Pantalon en laine</span>
-                <span class="text-stone-600 text-sm mt-1 block" data-i18n-product-details>Taille : 38 · Couleur : Gris</span>
+                <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product3.name">Pantalon en laine</span>
+                <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product3.details">Taille : 38 · Couleur : Gris</span>
               </div>
               <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n-product-price>89&nbsp;€</span>
+                <span class="text-amber-700 font-semibold" data-i18n="cart.product3.price">89&nbsp;€</span>
               </div>
               <div class="flex items-center justify-center">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-decrease aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">3</span>
-                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-increase aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
+                  <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.increase" aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
                 </div>
               </div>
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n-remove aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
           </ul>
@@ -234,26 +236,26 @@
 
         <!-- Order Summary Section -->
         <aside class="bg-white rounded-lg shadow-sm p-6 h-fit lg:sticky lg:top-28 self-start mt-10 lg:mt-0">
-          <h2 class="font-serif text-2xl text-stone-900 mb-6" data-i18n-summary>Résumé de la commande</h2>
+          <h2 class="font-serif text-2xl text-stone-900 mb-6" data-i18n="cart.summary">Résumé de la commande</h2>
           <div class="space-y-3 text-base">
             <div class="flex justify-between">
-              <span class="text-stone-600" data-i18n-subtotal>Sous-total</span>
+              <span class="text-stone-600" data-i18n="cart.subtotal">Sous-total</span>
               <span class="font-semibold text-stone-900">435&nbsp;€</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-stone-600" data-i18n-shipping>Livraison</span>
+              <span class="text-stone-600" data-i18n="cart.shipping">Livraison</span>
               <span class="font-semibold text-stone-900">15&nbsp;€</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-stone-600" data-i18n-tax>Taxes</span>
+              <span class="text-stone-600" data-i18n="cart.tax">Taxes</span>
               <span class="font-semibold text-stone-900">45&nbsp;€</span>
             </div>
             <div class="font-serif font-semibold text-amber-700 text-lg mt-4 flex justify-between">
-              <span data-i18n-total>Total</span>
+              <span data-i18n="cart.total">Total</span>
               <span>495&nbsp;€</span>
             </div>
           </div>
-          <a href="checkout.html" class="w-full block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200 mt-6 text-center focus:outline-none focus:ring-2 focus:ring-amber-700" style="min-width:44px; min-height:44px;" data-i18n-purchase>Finaliser l'achat</a>
+          <a href="checkout.html" class="w-full block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200 mt-6 text-center focus:outline-none focus:ring-2 focus:ring-amber-700" style="min-width:44px; min-height:44px;" data-i18n="cart.purchase">Finaliser l'achat</a>
         </aside>
       </div>
     </div>
@@ -321,125 +323,6 @@
   <!-- END SHARED FOOTER -->
 
   <script src="./i18n.js" defer></script>
-</body>
-<script>
-// Language translations for all visible text
-const translations = {
-  fr: {
-    breadcrumbHome: "Accueil",
-    breadcrumbCart: "Mon Panier",
-    cartHeading: "Mon Panier",
-    cartAria: "Articles dans le panier",
-    product1: {
-      name: "Chemise blanche classique",
-      details: "Taille : M · Couleur : Blanc",
-      alt: "Chemise blanche classique, taille M, blanc"
-    },
-    product2: {
-      name: "Mocassins en cuir parisiens",
-      details: "Taille : 42 · Couleur : Noir",
-      alt: "Mocassins en cuir parisiens, taille 42, noir"
-    },
-    product3: {
-      name: "Pantalon en laine",
-      details: "Taille : 38 · Couleur : Gris",
-      alt: "Pantalon en laine, taille 38, gris"
-    },
-    price: ["49 €", "120 €", "89 €"],
-    decrease: "Diminuer la quantité",
-    increase: "Augmenter la quantité",
-    remove: "Retirer",
-    removeAria: "Retirer l'article",
-    summary: "Résumé de la commande",
-    subtotal: "Sous-total",
-    shipping: "Livraison",
-    tax: "Taxes",
-    total: "Total",
-    purchase: "Finaliser l'achat"
-  },
-  en: {
-    breadcrumbHome: "Home",
-    breadcrumbCart: "My Cart",
-    cartHeading: "My Cart",
-    cartAria: "Cart items",
-    product1: {
-      name: "Classic White Shirt",
-      details: "Size: M · Color: White",
-      alt: "Classic white shirt, size M, white"
-    },
-    product2: {
-      name: "Parisian Leather Loafers",
-      details: "Size: 42 · Color: Black",
-      alt: "Parisian leather loafers, size 42, black"
-    },
-    product3: {
-      name: "Wool Trousers",
-      details: "Size: 38 · Color: Grey",
-      alt: "Wool trousers, size 38, grey"
-    },
-    price: ["€49", "€120", "€89"],
-    decrease: "Decrease quantity",
-    increase: "Increase quantity",
-    remove: "Remove",
-    removeAria: "Remove item",
-    summary: "Order Summary",
-    subtotal: "Subtotal",
-    shipping: "Shipping",
-    tax: "Tax",
-    total: "Total",
-    purchase: "Purchase"
-  }
-};
-
-function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  const t = translations[lang];
-  // Breadcrumb
-  document.querySelector('[data-i18n-breadcrumb-home]').textContent = t.breadcrumbHome;
-  document.querySelector('[data-i18n-breadcrumb-cart]').textContent = t.breadcrumbCart;
-  // Heading
-  document.querySelector('[data-i18n-cart-heading]').textContent = t.cartHeading;
-  // Cart aria label
-  document.querySelector('[data-i18n-cart-aria]').setAttribute('aria-label', t.cartAria);
-  // Product info
-  const products = [t.product1, t.product2, t.product3];
-  document.querySelectorAll('[data-i18n-product-name]').forEach((el, i) => el.textContent = products[i].name);
-  document.querySelectorAll('[data-i18n-product-details]').forEach((el, i) => el.textContent = products[i].details);
-  document.querySelectorAll('[data-i18n-product-alt]').forEach((el, i) => el.alt = products[i].alt);
-  // Price
-  document.querySelectorAll('[data-i18n-product-price]').forEach((el, i) => el.textContent = t.price[i]);
-  // Quantity controls
-  document.querySelectorAll('[data-i18n-decrease]').forEach(el => el.setAttribute('aria-label', t.decrease));
-  document.querySelectorAll('[data-i18n-increase]').forEach(el => el.setAttribute('aria-label', t.increase));
-  // Remove
-  document.querySelectorAll('[data-i18n-remove]').forEach(el => el.textContent = t.remove);
-  document.querySelectorAll('[data-i18n-remove]').forEach(el => el.setAttribute('aria-label', t.removeAria));
-  // Summary
-  document.querySelector('[data-i18n-summary]').textContent = t.summary;
-  document.querySelector('[data-i18n-subtotal]').textContent = t.subtotal;
-  document.querySelector('[data-i18n-shipping]').textContent = t.shipping;
-  document.querySelector('[data-i18n-tax]').textContent = t.tax;
-  document.querySelector('[data-i18n-total]').textContent = t.total;
-  document.querySelector('[data-i18n-purchase]').textContent = t.purchase;
-}
-
-// Language switcher event
-document.querySelectorAll('[data-lang]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const lang = this.getAttribute('data-lang');
-    setLanguage(lang);
-    // Update aria-current
-    document.querySelectorAll('[data-lang]').forEach(l => l.setAttribute('aria-current', 'false'));
-    this.setAttribute('aria-current', 'true');
-  });
-});
-
-// On page load, set language based on current <html lang>
-document.addEventListener('DOMContentLoaded', function() {
-  setLanguage(document.documentElement.lang || 'fr');
-});
-</script>
-
+  <script src="./cart.js" defer></script>
 </body>
 </html>

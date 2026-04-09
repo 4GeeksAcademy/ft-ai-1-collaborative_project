@@ -2,6 +2,9 @@
   const STORAGE_KEY = "ml-language";
   const DEFAULT_LANG = "en";
 
+  let cachedI18nAttrNodes = null;
+  let cachedLangLinks = null;
+
   const translations = {
     en: {
       // Catalog products
@@ -163,7 +166,32 @@
       "product.related2.ariaLabel": "View Linen Belted Dress — 172 €",
       "product.related3.name": "Tailored Evening Dress",
       "product.related3.meta": "Black · XS-L",
-      "product.related3.ariaLabel": "View Tailored Evening Dress — 214 €"
+      "product.related3.ariaLabel": "View Tailored Evening Dress — 214 €",
+      "breadcrumb.cart": "My Cart",
+      "cart.heading": "My Cart",
+      "cart.aria": "Cart items",
+      "cart.product1.name": "Classic White Shirt",
+      "cart.product1.details": "Size: M · Color: White",
+      "cart.product1.alt": "Classic white shirt, size M, white",
+      "cart.product1.price": "€49",
+      "cart.product2.name": "Parisian Leather Loafers",
+      "cart.product2.details": "Size: 42 · Color: Black",
+      "cart.product2.alt": "Parisian leather loafers, size 42, black",
+      "cart.product2.price": "€120",
+      "cart.product3.name": "Wool Trousers",
+      "cart.product3.details": "Size: 38 · Color: Grey",
+      "cart.product3.alt": "Wool trousers, size 38, grey",
+      "cart.product3.price": "€89",
+      "cart.decrease": "Decrease quantity",
+      "cart.increase": "Increase quantity",
+      "cart.remove": "Remove",
+      "cart.removeAria": "Remove item",
+      "cart.summary": "Order Summary",
+      "cart.subtotal": "Subtotal",
+      "cart.shipping": "Shipping",
+      "cart.tax": "Tax",
+      "cart.total": "Total",
+      "cart.purchase": "Purchase"
     },
     fr: {
       // Catalog products
@@ -325,7 +353,32 @@
       "product.related2.ariaLabel": "Voir Robe Ceinturée en Lin — 172 €",
       "product.related3.name": "Robe de Soirée Ajustée",
       "product.related3.meta": "Noir · XS-L",
-      "product.related3.ariaLabel": "Voir Robe de Soirée Ajustée — 214 €"
+      "product.related3.ariaLabel": "Voir Robe de Soirée Ajustée — 214 €",
+      "breadcrumb.cart": "Mon Panier",
+      "cart.heading": "Mon Panier",
+      "cart.aria": "Articles dans le panier",
+      "cart.product1.name": "Chemise blanche classique",
+      "cart.product1.details": "Taille : M · Couleur : Blanc",
+      "cart.product1.alt": "Chemise blanche classique, taille M, blanc",
+      "cart.product1.price": "49 €",
+      "cart.product2.name": "Mocassins en cuir parisiens",
+      "cart.product2.details": "Taille : 42 · Couleur : Noir",
+      "cart.product2.alt": "Mocassins en cuir parisiens, taille 42, noir",
+      "cart.product2.price": "120 €",
+      "cart.product3.name": "Pantalon en laine",
+      "cart.product3.details": "Taille : 38 · Couleur : Gris",
+      "cart.product3.alt": "Pantalon en laine, taille 38, gris",
+      "cart.product3.price": "89 €",
+      "cart.decrease": "Diminuer la quantité",
+      "cart.increase": "Augmenter la quantité",
+      "cart.remove": "Retirer",
+      "cart.removeAria": "Retirer l'article",
+      "cart.summary": "Résumé de la commande",
+      "cart.subtotal": "Sous-total",
+      "cart.shipping": "Livraison",
+      "cart.tax": "Taxes",
+      "cart.total": "Total",
+      "cart.purchase": "Finaliser l'achat"
     }
   };
 
@@ -350,7 +403,8 @@
       node.textContent = dict[key];
     });
 
-    const translatableAttrs = document.querySelectorAll("[data-i18n-attr]");
+    if (!cachedI18nAttrNodes) cachedI18nAttrNodes = document.querySelectorAll("[data-i18n-attr]");
+    const translatableAttrs = cachedI18nAttrNodes;
     translatableAttrs.forEach((node) => {
       const instruction = node.getAttribute("data-i18n-attr");
       if (!instruction) {
@@ -371,7 +425,8 @@
   }
 
   function updateLanguageToggleUI(lang) {
-    const links = document.querySelectorAll("[data-lang]");
+    if (!cachedLangLinks) cachedLangLinks = document.querySelectorAll("[data-lang]");
+    const links = cachedLangLinks;
 
     links.forEach((link) => {
       const isActive = link.getAttribute("data-lang") === lang;

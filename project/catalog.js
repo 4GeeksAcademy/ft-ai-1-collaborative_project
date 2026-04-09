@@ -28,8 +28,6 @@ function renderProducts(productList) {
       </a>
     </article>
   `).join('');
-  // Re-apply i18n if available
-  if (window.applyTextTranslations) window.applyTextTranslations();
 }
 
 function getSelectedCategories() {
