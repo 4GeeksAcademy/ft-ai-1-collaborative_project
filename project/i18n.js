@@ -56,7 +56,35 @@
       "footer.about": "About the Brand",
       "footer.contact": "Contact",
       "footer.copyright": "© 2026 Maison Lumiere. All rights reserved.",
-      "footer.payment": "Secure payment - Visa · Mastercard · PayPal"
+      "footer.payment": "Secure payment - Visa · Mastercard · PayPal",
+
+      "home.season": "Spring — Summer Collection",
+      "home.tagline": "Parisian Fashion, Reimagined",
+      "home.heroSubtitle": "Capsule collections for women and men. Premium materials, responsible craftsmanship, Parisian spirit.",
+      "home.heroCta": "Discover the Collection",
+      "home.arrivals": "New Arrivals",
+      "home.viewAll": "View all →",
+      "home.viewArrivals": "View all new arrivals",
+      "home.sellers": "Best Sellers",
+      "home.viewSellers": "View all best sellers",
+
+      "home.card1Meta": "Ivory · XS S M L XL",
+      "home.card2Meta": "Camel · XS S M L XL",
+      "home.card3Meta": "Grey · 34 36 38 40 42",
+      "home.card4Meta": "Off-white · XS S M L XL",
+      "home.card5Meta": "Taupe · XS S M L XL",
+      "home.card6Meta": "Bordeaux · XS S M L XL",
+      "home.card7Meta": "Indigo · 34 36 38 40 42",
+      "home.card8Meta": "Cream · XS S M L XL",
+
+      "home.card1Name": "Ivory Crêpe Midi Dress",
+      "home.card2Name": "Structured Camel Blazer",
+      "home.card3Name": "Wide-Leg Flannel Trousers",
+      "home.card4Name": "Off-White Linen Shirt",
+      "home.card5Name": "Taupe Cashmere Coat",
+      "home.card6Name": "Bordeaux Wrap Dress",
+      "home.card7Name": "Straight Indigo Jeans",
+      "home.card8Name": "Cream Merino Sweater"
     },
     fr: {
       "skip.main": "Aller au contenu principal",
@@ -111,7 +139,35 @@
       "footer.about": "A propos de la marque",
       "footer.contact": "Contact",
       "footer.copyright": "© 2026 Maison Lumiere. Tous droits reserves.",
-      "footer.payment": "Paiement securise - Visa · Mastercard · PayPal"
+      "footer.payment": "Paiement securise - Visa · Mastercard · PayPal",
+
+      "home.season": "Collection Printemps — Été",
+      "home.tagline": "La mode parisienne, réinventée",
+      "home.heroSubtitle": "Collections capsule pour femmes et hommes. Matières nobles, savoir-faire responsable, esprit parisien.",
+      "home.heroCta": "Découvrir la collection",
+      "home.arrivals": "Nouvelles Arrivées",
+      "home.viewAll": "Voir tout →",
+      "home.viewArrivals": "Voir toutes les nouvelles arrivées",
+      "home.sellers": "Meilleures Ventes",
+      "home.viewSellers": "Voir tous les bestsellers",
+
+      "home.card1Meta": "Ivoire · XS S M L XL",
+      "home.card2Meta": "Camel · XS S M L XL",
+      "home.card3Meta": "Gris · 34 36 38 40 42",
+      "home.card4Meta": "Blanc cassé · XS S M L XL",
+      "home.card5Meta": "Taupe · XS S M L XL",
+      "home.card6Meta": "Bordeaux · XS S M L XL",
+      "home.card7Meta": "Indigo · 34 36 38 40 42",
+      "home.card8Meta": "Crème · XS S M L XL",
+
+      "home.card1Name": "Robe Midi Crêpe Ivoire",
+      "home.card2Name": "Blazer Structuré Camel",
+      "home.card3Name": "Pantalon Large Flanelle",
+      "home.card4Name": "Chemise Lin Blanc Cassé",
+      "home.card5Name": "Manteau Cachemire Taupe",
+      "home.card6Name": "Robe Portefeuille Bordeaux",
+      "home.card7Name": "Jean Droit Indigo",
+      "home.card8Name": "Pull Laine Mérinos Crème"
     }
   };
 
