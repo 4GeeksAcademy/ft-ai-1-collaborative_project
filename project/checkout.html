@@ -149,35 +149,118 @@
        sm: (640px)  md: (768px)  lg: (1024px)  xl: (1280px)
        ============================================================ -->
   <main id="main-content" class="flex-1 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-0">
+    <section class="bg-stone-50 text-stone-600 font-sans">
+      <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <header class="mb-8">
+          <h1 class="font-serif text-3xl sm:text-4xl text-stone-900" data-i18n="checkout.h1">Finalize your order</h1>
+          <p class="mt-2 text-sm sm:text-base text-stone-600" data-i18n="checkout.subtitle">Complete your details to confirm your Maison Lumiere purchase.</p>
+        </header>
 
-    <!-- TODO (checkout.html — Payment Form / 3-Step Checkout):
-         Structure to build:
-         1. Breadcrumb: <nav aria-label="Breadcrumb"> — Home > Cart > Checkout
-         2. <h1>Checkout</h1>
-         3. Step progress indicator (pure HTML — no JS state):
-            <ol aria-label="Checkout steps"> with 3 items
-            Step 1 = active (amber circle), steps 2 & 3 = inactive (stone circle)
-            Lay all 3 steps on the page (no JS hiding) — use visual separation
-         4. Two-column layout on lg: (form left, order summary right)
-            LEFT: the 3 form sections stacked
-            RIGHT: <aside aria-labelledby="checkout-summary-heading"> — order summary
+        <form action="#" method="post" class="grid gap-6 lg:grid-cols-3">
+          <div class="space-y-6 lg:col-span-2">
+            <fieldset class="bg-white rounded-xl border border-stone-200 p-5 sm:p-6">
+              <legend class="font-serif text-xl text-stone-900 mb-4" data-i18n="checkout.step1">Step 1 - Personal details</legend>
 
-         Form section structure (repeat for each step):
-         <section aria-labelledby="step1-heading">
-           <h2 id="step1-heading">1. Personal Information</h2>
-           <form> with fields:
-             Step 1: first name, last name, email, phone
-               autocomplete="given-name", "family-name", "email", "tel"
-             Step 2: address, postal code, city, country + radio: Standard / Express shipping
-               autocomplete="street-address", "postal-code", "address-level2", "country-name"
-             Step 3: card number, expiry date, CVV, cardholder name
-               autocomplete="cc-number", "cc-exp", "cc-csc", "cc-name"
-               Submit button: <button type="submit"> — "Place Order"
+              <div class="mb-5">
+                <label for="nom-complet" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.fullName">Full name</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="nom-complet" name="nomComplet" required autocomplete="name" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
 
-         All inputs use the standard pattern:
-           <label for="id"> + <input id="id" required> with focus:ring-2 focus:ring-amber-700
-           Minimum tap target: py-2.5 on inputs
-    -->
+              <div class="mb-5">
+                <label for="email" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.email">Email address</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="email" name="email" required autocomplete="email" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+
+              <div class="mb-5">
+                <label for="telephone" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.phone">Phone</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="telephone" name="telephone" required autocomplete="tel" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+            </fieldset>
+
+            <fieldset class="bg-white rounded-xl border border-stone-200 p-5 sm:p-6">
+              <legend class="font-serif text-xl text-stone-900 mb-4" data-i18n="checkout.step2">Step 2 - Shipping address</legend>
+
+              <div class="mb-5">
+                <label for="rue" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.street">Street address</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="rue" name="rue" required autocomplete="address-line1" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+
+              <div class="mb-5">
+                <label for="ville" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.city">City</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="ville" name="ville" required autocomplete="address-level2" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+
+              <div class="mb-5 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="code-postal" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.zip">Postal code</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <input type="text" id="code-postal" name="codePostal" required autocomplete="postal-code" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+                </div>
+
+                <div>
+                  <label for="pays" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.country">Country</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <input type="text" id="pays" name="pays" required autocomplete="country-name" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="bg-white rounded-xl border border-stone-200 p-5 sm:p-6">
+              <legend class="font-serif text-xl text-stone-900 mb-4" data-i18n="checkout.step3">Step 3 - Card payment</legend>
+
+              <div class="mb-5">
+                <label for="titulaire-carte" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.cardholder">Cardholder name</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="titulaire-carte" name="titulaireCarte" required autocomplete="cc-name" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+
+              <div class="mb-5">
+                <label for="numero-carte" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.cardNumber">Card number</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                <input type="text" id="numero-carte" name="numeroCarte" required autocomplete="cc-number" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+              </div>
+
+              <div class="mb-5 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="expiration" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.expiry">Expiry date</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <input type="text" id="expiration" name="expiration" required autocomplete="cc-exp" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+                </div>
+
+                <div>
+                  <label for="cvv" class="block text-sm font-medium text-stone-700 mb-1"><span data-i18n="checkout.label.cvv">CVV</span> <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <input type="text" id="cvv" name="cvv" required autocomplete="cc-csc" placeholder="Example" data-i18n-attr="placeholder: checkout.placeholder.example" class="w-full px-4 py-2.5 border border-stone-300 rounded bg-white text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition duration-200" />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside aria-labelledby="checkout-summary-heading" class="bg-white rounded-xl border border-stone-200 p-5 sm:p-6 h-fit lg:sticky lg:top-6">
+            <h2 id="checkout-summary-heading" class="font-serif text-2xl text-stone-900 mb-4" data-i18n="checkout.summaryTitle">Order summary</h2>
+
+            <div class="space-y-3 text-sm sm:text-base">
+              <div class="flex items-center justify-between">
+                <span data-i18n="checkout.subtotal">Subtotal</span>
+                <span class="text-stone-900 font-medium">145,00 EUR</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span data-i18n="checkout.shipping">Shipping</span>
+                <span class="text-stone-900 font-medium">6,90 EUR</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span data-i18n="checkout.tax">Tax</span>
+                <span class="text-stone-900 font-medium">30,38 EUR</span>
+              </div>
+              <div class="border-t border-stone-200 pt-3 flex items-center justify-between">
+                <p class="font-serif text-lg text-stone-900" data-i18n="checkout.total">Total</p>
+                <p class="font-serif text-lg text-stone-900">182,28 EUR</p>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <button type="submit" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200" data-i18n="checkout.payNow">Pay now</button>
+            </div>
+
+            <p class="mt-4 text-xs text-stone-600" data-i18n="checkout.security">Secure payment. Your data is encrypted and processed confidentially.</p>
+          </aside>
+        </form>
+      </div>
+    </section>
 
   </main>
   <!-- END PAGE CONTENT -->
