@@ -189,6 +189,22 @@
                   <input type="checkbox" name="category" value="Tops" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.tops">Tops</span>
                 </label>
+                <label class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input type="checkbox" name="category" value="Coats" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                  <span data-i18n="catalog.coats">Coats</span>
+                </label>
+                <label class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input type="checkbox" name="category" value="Trousers" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                  <span data-i18n="catalog.trousers">Trousers</span>
+                </label>
+                <label class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input type="checkbox" name="category" value="Accessories" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                  <span data-i18n="catalog.accessories">Accessories</span>
+                </label>
+                <label class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input type="checkbox" name="category" value="Shoes" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                  <span data-i18n="catalog.shoes">Shoes</span>
+                </label>
               </div>
             </fieldset>
           </div>
@@ -196,28 +212,7 @@
       </aside>
 
       <!-- Product Grid -->
-      <div role="feed" aria-label="Products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Product Card 1 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Linen Dress - 120 EUR" data-i18n-attr="aria-label: catalog.product1.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Linen Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product1.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product1.name">Linen Dress</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product1.desc">Lightweight summer dress in natural linen.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product1.price">120 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 2 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Wool Coat - 250 EUR" data-i18n-attr="aria-label: catalog.product2.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=400&q=80" alt="Wool Coat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product2.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product2.name">Wool Coat</h2>
+      <div id="product-grid" role="feed" aria-label="Products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product2.desc">Classic tailored coat in premium wool.</p>
               <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product2.price">250 EUR</p>
             </div>
@@ -367,6 +362,9 @@
   <!-- END SHARED FOOTER -->
 
   <script src="./i18n.js" defer></script>
+
+  <!-- Dynamic catalog loader -->
+  <script src="./catalog.js" defer></script>
 
 </body>
 </html>
