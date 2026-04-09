@@ -139,7 +139,31 @@
       "home.card5Name": "Taupe Cashmere Coat",
       "home.card6Name": "Bordeaux Wrap Dress",
       "home.card7Name": "Straight Indigo Jeans",
-      "home.card8Name": "Cream Merino Sweater"
+      "home.card8Name": "Cream Merino Sweater",
+
+      "product.name": "Ivory Crepe Midi Dress",
+      "product.ref": "Ref:",
+      "product.size": "Size",
+      "product.quantity": "Quantity:",
+      "product.addToCart": "Add to cart",
+      "product.description": "Description",
+      "product.desc1": "The Ivory Crepe Midi Dress (€189.00, ref. ML-DRS-001) is crafted from 100% crêpe fabric in France, fully lined, and finished with a concealed zip closure. Maison Lumiere applies Parisian tailoring references and responsible manufacturing controls to this tailored V-neck construction.",
+      "product.desc2": "The garment is built with clean seam finishing and a structured waist line to support repeat wear across formal and occasion use.",
+      "product.detail.fabric": "Fabric composition: 100% crêpe",
+      "product.detail.lining": "Lining: fully lined interior",
+      "product.detail.closure": "Closure type: concealed zip closure",
+      "product.detail.care": "Care instructions: dry clean only",
+      "product.detail.origin": "Country of origin: made in France",
+      "product.related": "You may also like",
+      "product.related1.name": "Satin Slip Dress",
+      "product.related1.meta": "Champagne · XS-XL",
+      "product.related1.ariaLabel": "View Satin Slip Dress — 165 €",
+      "product.related2.name": "Linen Belted Dress",
+      "product.related2.meta": "Sand · S-XL",
+      "product.related2.ariaLabel": "View Linen Belted Dress — 172 €",
+      "product.related3.name": "Tailored Evening Dress",
+      "product.related3.meta": "Black · XS-L",
+      "product.related3.ariaLabel": "View Tailored Evening Dress — 214 €"
     },
     fr: {
       // Catalog products
@@ -277,7 +301,31 @@
       "home.card5Name": "Manteau Cachemire Taupe",
       "home.card6Name": "Robe Portefeuille Bordeaux",
       "home.card7Name": "Jean Droit Indigo",
-      "home.card8Name": "Pull Laine Mérinos Crème"
+      "home.card8Name": "Pull Laine Mérinos Crème",
+
+      "product.name": "Robe Midi Crêpe Ivoire",
+      "product.ref": "Réf :",
+      "product.size": "Taille",
+      "product.quantity": "Quantité :",
+      "product.addToCart": "Ajouter au panier",
+      "product.description": "Description",
+      "product.desc1": "La Robe Midi Crêpe Ivoire (189,00 €, réf. ML-DRS-001) est confectionnée en 100% crêpe en France, entièrement doublée et fermée par un zip invisible. Maison Lumière applique les références de la taille parisienne et des contrôles de fabrication responsable à cette construction col V ajusté.",
+      "product.desc2": "Le vêtement est réalisé avec des finitions de couture soignées et une taille structurée pour soutenir un port répété en contexte formel et de cérémonie.",
+      "product.detail.fabric": "Composition : 100% crêpe",
+      "product.detail.lining": "Doublure : entièrement doublée",
+      "product.detail.closure": "Fermeture : zip invisible",
+      "product.detail.care": "Entretien : nettoyage à sec uniquement",
+      "product.detail.origin": "Origine : fabriqué en France",
+      "product.related": "Vous aimerez aussi",
+      "product.related1.name": "Robe Nuisette en Satin",
+      "product.related1.meta": "Champagne · XS-XL",
+      "product.related1.ariaLabel": "Voir Robe Nuisette en Satin — 165 €",
+      "product.related2.name": "Robe Ceinturée en Lin",
+      "product.related2.meta": "Sable · S-XL",
+      "product.related2.ariaLabel": "Voir Robe Ceinturée en Lin — 172 €",
+      "product.related3.name": "Robe de Soirée Ajustée",
+      "product.related3.meta": "Noir · XS-L",
+      "product.related3.ariaLabel": "Voir Robe de Soirée Ajustée — 214 €"
     }
   };
 

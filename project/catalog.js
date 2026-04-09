@@ -18,7 +18,7 @@ function renderProducts(productList) {
     <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
       <a href="product.html" aria-label="View ${product.name[currentLang]} - ${product.price} ${product.currency}">
         <div class="h-72 overflow-hidden">
-          <img src="${product.image}" alt="${product.name[currentLang]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="${product.image}" alt="${product.alt[currentLang]}" width="400" height="480" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
         </div>
         <div class="p-4">
           <h2 class="font-serif text-lg text-stone-900">${product.name[currentLang]}</h2>

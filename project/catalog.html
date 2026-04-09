@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Catalog — Maison Lumière</title>
-  <meta name="description" content="Browse the full Maison Lumière collection: dresses, coats, shirts, trousers and accessories. Filter by category and size." />
+  <meta name="description" content="Browse the full Maison Lumière collection: silk shirts, linen dresses, wool coats, leather bags and more. Filter by category to find your perfect piece." />
   <link rel="canonical" href="https://maisonlumiere.fr/catalog.html" />
 
   <!-- Multilingual alternates (SEO) -->
@@ -49,7 +49,17 @@
         "name": "Maison Lumière Catalog",
         "url": "https://maisonlumiere.fr/catalog.html",
         "description": "Full Maison Lumière ready-to-wear collection: dresses, coats, shirts, trousers and accessories.",
-        "numberOfItems": 20
+        "numberOfItems": 8,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Linen Dress",     "url": "https://maisonlumiere.fr/product.html?id=1" },
+          { "@type": "ListItem", "position": 2, "name": "Wool Coat",       "url": "https://maisonlumiere.fr/product.html?id=2" },
+          { "@type": "ListItem", "position": 3, "name": "Silk Shirt",      "url": "https://maisonlumiere.fr/product.html?id=3" },
+          { "@type": "ListItem", "position": 4, "name": "Cotton Trousers", "url": "https://maisonlumiere.fr/product.html?id=4" },
+          { "@type": "ListItem", "position": 5, "name": "Leather Bag",     "url": "https://maisonlumiere.fr/product.html?id=5" },
+          { "@type": "ListItem", "position": 6, "name": "Cashmere Scarf",  "url": "https://maisonlumiere.fr/product.html?id=6" },
+          { "@type": "ListItem", "position": 7, "name": "Suede Boots",     "url": "https://maisonlumiere.fr/product.html?id=7" },
+          { "@type": "ListItem", "position": 8, "name": "Straw Hat",       "url": "https://maisonlumiere.fr/product.html?id=8" }
+        ]
       }
     ]
   }
@@ -168,7 +178,7 @@
     <!-- Page Heading -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
       <h1 class="font-serif text-4xl sm:text-5xl text-stone-900" data-i18n="catalog.heading">Catalog</h1>
-      <h2 class="font-serif text-2xl sm:text-3xl text-stone-900" data-i18n="catalog.subheading">Discover curated essentials crafted in premium fabrics.</h2>
+      <h2 class="font-serif text-2xl sm:text-3xl text-stone-900" data-i18n="catalog.subheading">Silk, linen, cashmere and fine wool — ready-to-wear made in France.</h2>
     </div>
 
     <!-- Filters and Product Grid -->
@@ -181,28 +191,28 @@
             <fieldset class="border-0 p-0 m-0">
               <legend class="text-sm font-medium text-stone-900 mb-3" data-i18n="catalog.category">Category</legend>
               <div class="space-y-2">
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Dresses" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-dresses" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-dresses" type="checkbox" name="category" value="Dresses" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.dresses">Dresses</span>
                 </label>
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Tops" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-tops" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-tops" type="checkbox" name="category" value="Tops" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.tops">Tops</span>
                 </label>
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Coats" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-coats" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-coats" type="checkbox" name="category" value="Coats" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.coats">Coats</span>
                 </label>
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Trousers" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-trousers" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-trousers" type="checkbox" name="category" value="Trousers" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.trousers">Trousers</span>
                 </label>
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Accessories" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-accessories" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-accessories" type="checkbox" name="category" value="Accessories" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.accessories">Accessories</span>
                 </label>
-                <label class="flex items-center gap-2 min-h-11 text-stone-600">
-                  <input type="checkbox" name="category" value="Shoes" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
+                <label for="filter-shoes" class="flex items-center gap-2 min-h-11 text-stone-600">
+                  <input id="filter-shoes" type="checkbox" name="category" value="Shoes" class="h-4 w-4 border-stone-300 rounded text-amber-700 focus:ring-amber-700" />
                   <span data-i18n="catalog.shoes">Shoes</span>
                 </label>
               </div>
@@ -213,90 +223,6 @@
 
       <!-- Product Grid -->
       <div id="product-grid" role="feed" aria-label="Products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product2.desc">Classic tailored coat in premium wool.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product2.price">250 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 3 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Silk Shirt - 90 EUR" data-i18n-attr="aria-label: catalog.product3.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Silk Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product3.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product3.name">Silk Shirt</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product3.desc">Elegant shirt crafted from pure silk.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product3.price">90 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 4 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Cotton Trousers - 80 EUR" data-i18n-attr="aria-label: catalog.product4.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Cotton Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product4.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product4.name">Cotton Trousers</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product4.desc">Comfortable trousers in soft cotton twill.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product4.price">80 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 5 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Leather Bag - 180 EUR" data-i18n-attr="aria-label: catalog.product5.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80" alt="Leather Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product5.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product5.name">Leather Bag</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product5.desc">Handcrafted leather bag with gold hardware.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product5.price">180 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 6 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Cashmere Scarf - 60 EUR" data-i18n-attr="aria-label: catalog.product6.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=400&q=80" alt="Cashmere Scarf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product6.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product6.name">Cashmere Scarf</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product6.desc">Soft cashmere scarf for all seasons.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product6.price">60 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 7 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Suede Boots - 140 EUR" data-i18n-attr="aria-label: catalog.product7.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Suede Boots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product7.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product7.name">Suede Boots</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product7.desc">Ankle boots in soft brown suede.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product7.price">140 EUR</p>
-            </div>
-          </a>
-        </article>
-        <!-- Product Card 8 -->
-        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="View Straw Hat - 40 EUR" data-i18n-attr="aria-label: catalog.product8.ariaLabel">
-            <div class="h-72 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=400&h=480&q=80" alt="Straw Hat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-i18n-attr="alt: catalog.product8.imgAlt" />
-            </div>
-            <div class="p-4">
-              <h2 class="font-serif text-lg text-stone-900" data-i18n="catalog.product8.name">Straw Hat</h2>
-              <p class="mt-1 text-sm text-stone-600" data-i18n="catalog.product8.desc">Wide-brimmed straw hat for sunny days.</p>
-              <p class="mt-2 text-amber-700 font-semibold" data-i18n="catalog.product8.price">40 EUR</p>
-            </div>
-          </a>
-        </article>
-      </div>
     </div>
   </main>
   <!-- END PAGE CONTENT -->

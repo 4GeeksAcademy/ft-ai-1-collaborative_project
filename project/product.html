@@ -179,13 +179,13 @@
        ============================================================ -->
   <main id="main-content" class="flex-1 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-0">
 
-    <nav aria-label="Fil d'Ariane" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
       <ol class="flex items-center gap-2 text-sm text-stone-500 list-none p-0 m-0" role="list">
-        <li><a href="index.html" class="hover:text-amber-700 transition-colors duration-200">Accueil</a></li>
+        <li><a href="index.html" class="hover:text-amber-700 transition-colors duration-200" data-i18n="breadcrumb.home">Home</a></li>
         <li aria-hidden="true" class="text-stone-400">/</li>
-        <li><a href="catalog.html" class="hover:text-amber-700 transition-colors duration-200">Catalogue</a></li>
+        <li><a href="catalog.html" class="hover:text-amber-700 transition-colors duration-200" data-i18n="breadcrumb.catalog">Catalog</a></li>
         <li aria-hidden="true" class="text-stone-400">/</li>
-        <li class="text-stone-900 font-medium" aria-current="page">Ivory Crepe Midi Dress</li>
+        <li class="text-stone-900 font-medium" aria-current="page" data-i18n="product.name">Ivory Crepe Midi Dress</li>
       </ol>
     </nav>
 
@@ -206,9 +206,9 @@
 
       <div class="bg-white rounded-lg shadow-sm p-6 sm:p-8">
         <p class="text-stone-500 text-sm mb-2">Maison Lumiere</p>
-        <h1 itemprop="name" class="font-serif text-3xl sm:text-4xl text-stone-900 mb-4">Ivory Crepe Midi Dress</h1>
+        <h1 itemprop="name" class="font-serif text-3xl sm:text-4xl text-stone-900 mb-4" data-i18n="product.name">Ivory Crepe Midi Dress</h1>
 
-        <p class="text-stone-400 text-sm mb-4">Ref: <span itemprop="sku">ML-DRS-001</span></p>
+        <p class="text-stone-400 text-sm mb-4"><span data-i18n="product.ref">Ref:</span> <span itemprop="sku">ML-DRS-001</span></p>
 
         <p itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mb-8">
           <meta itemprop="priceCurrency" content="EUR" />
@@ -217,7 +217,7 @@
         </p>
 
         <fieldset class="border-0 p-0 m-0 mb-8">
-          <legend class="text-sm font-medium text-stone-700 mb-3">Taille</legend>
+          <legend class="text-sm font-medium text-stone-700 mb-3" data-i18n="product.size">Size</legend>
           <div class="flex flex-wrap gap-2">
             <label class="cursor-pointer">
               <input type="radio" name="size" value="XS" class="sr-only peer" />
@@ -252,69 +252,69 @@
           </div>
         </fieldset>
 
-        <p class="text-sm text-stone-700 mb-8">Quantity: <span class="font-medium">1</span></p>
+        <p class="text-sm text-stone-700 mb-8"><span data-i18n="product.quantity">Quantity:</span> <span class="font-medium">1</span></p>
 
-        <a href="cart.html" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200">
+        <a href="cart.html" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200" data-i18n="product.addToCart">
           Add to cart
         </a>
       </div>
     </article>
 
     <section aria-labelledby="description-heading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h2 id="description-heading" class="font-serif text-3xl text-stone-900 mb-8">Description</h2>
+      <h2 id="description-heading" class="font-serif text-3xl text-stone-900 mb-8" data-i18n="product.description">Description</h2>
       <div class="bg-white rounded-lg shadow-sm p-6 sm:p-8 space-y-3 text-stone-600 leading-relaxed">
-        <p>
+        <p data-i18n="product.desc1">
           The Ivory Crepe Midi Dress (€189.00, ref. ML-DRS-001) is crafted from 100% crêpe fabric in France, fully lined, and finished with a concealed zip closure.
           Maison Lumiere applies Parisian tailoring references and responsible manufacturing controls to this tailored V-neck construction.
         </p>
-        <p>The garment is built with clean seam finishing and a structured waist line to support repeat wear across formal and occasion use.</p>
+        <p data-i18n="product.desc2">The garment is built with clean seam finishing and a structured waist line to support repeat wear across formal and occasion use.</p>
         <ul class="list-disc list-inside space-y-1 text-stone-600 text-sm border-t border-stone-200 pt-4 mt-2">
-          <li>Fabric composition: 100% crêpe</li>
-          <li>Lining: fully lined interior</li>
-          <li>Closure type: concealed zip closure</li>
-          <li>Care instructions: dry clean only</li>
-          <li>Country of origin: made in France</li>
+          <li data-i18n="product.detail.fabric">Fabric composition: 100% crêpe</li>
+          <li data-i18n="product.detail.lining">Lining: fully lined interior</li>
+          <li data-i18n="product.detail.closure">Closure type: concealed zip closure</li>
+          <li data-i18n="product.detail.care">Care instructions: dry clean only</li>
+          <li data-i18n="product.detail.origin">Country of origin: made in France</li>
         </ul>
       </div>
     </section>
 
     <section aria-labelledby="related-heading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h2 id="related-heading" class="font-serif text-3xl text-stone-900 mb-8">You may also like</h2>
+      <h2 id="related-heading" class="font-serif text-3xl text-stone-900 mb-8" data-i18n="product.related">You may also like</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="Voir Satin Slip Dress — 165 €">
+          <a href="product.html" aria-label="View Satin Slip Dress — 165 €" data-i18n-attr="aria-label: product.related1.ariaLabel">
             <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=480&fit=crop&q=80" alt="Robe satinée champagne, coupe fluide et fines bretelles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=480&fit=crop&q=80" alt="Champagne satin slip dress with fluid cut and thin straps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
             </div>
             <div class="p-4">
-              <h3 class="font-serif text-stone-900 text-lg">Satin Slip Dress</h3>
-              <p class="text-stone-500 text-sm mt-1">Champagne · XS-XL</p>
+              <h3 class="font-serif text-stone-900 text-lg" data-i18n="product.related1.name">Satin Slip Dress</h3>
+              <p class="text-stone-500 text-sm mt-1" data-i18n="product.related1.meta">Champagne · XS-XL</p>
               <p class="mt-2 font-semibold text-amber-700">165 €</p>
             </div>
           </a>
         </article>
 
         <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="Voir Linen Belted Dress — 172 €">
+          <a href="product.html" aria-label="View Linen Belted Dress — 172 €" data-i18n-attr="aria-label: product.related2.ariaLabel">
             <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=480&fit=crop&q=80" alt="Robe ceinturée en lin beige, manches courtes et coupe midi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=480&fit=crop&q=80" alt="Sand belted linen dress with short sleeves and midi cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
             </div>
             <div class="p-4">
-              <h3 class="font-serif text-stone-900 text-lg">Linen Belted Dress</h3>
-              <p class="text-stone-500 text-sm mt-1">Sand · S-XL</p>
+              <h3 class="font-serif text-stone-900 text-lg" data-i18n="product.related2.name">Linen Belted Dress</h3>
+              <p class="text-stone-500 text-sm mt-1" data-i18n="product.related2.meta">Sand · S-XL</p>
               <p class="mt-2 font-semibold text-amber-700">172 €</p>
             </div>
           </a>
         </article>
 
         <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
-          <a href="product.html" aria-label="Voir Tailored Evening Dress — 214 €">
+          <a href="product.html" aria-label="View Tailored Evening Dress — 214 €" data-i18n-attr="aria-label: product.related3.ariaLabel">
             <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=480&fit=crop&q=80" alt="Robe de soirée noire, coupe ajustée et encolure élégante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=480&fit=crop&q=80" alt="Black tailored evening dress with fitted cut and elegant neckline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
             </div>
             <div class="p-4">
-              <h3 class="font-serif text-stone-900 text-lg">Tailored Evening Dress</h3>
-              <p class="text-stone-500 text-sm mt-1">Noir · XS-L</p>
+              <h3 class="font-serif text-stone-900 text-lg" data-i18n="product.related3.name">Tailored Evening Dress</h3>
+              <p class="text-stone-500 text-sm mt-1" data-i18n="product.related3.meta">Black · XS-L</p>
               <p class="mt-2 font-semibold text-amber-700">214 €</p>
             </div>
           </a>
