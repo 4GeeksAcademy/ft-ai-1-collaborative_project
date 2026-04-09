@@ -179,29 +179,148 @@
        ============================================================ -->
   <main id="main-content" class="flex-1 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-0">
 
-    <!-- TODO (product.html — Single Product View):
-         Structure to build inside <article itemscope itemtype="https://schema.org/Product">:
-         1. Breadcrumb: <nav aria-label="Breadcrumb"> — Home > Catalog > [Product Name]
-         2. Two-column layout (stacked on mobile, side-by-side on lg:):
-            LEFT col: product image (~half width on desktop)
-              <figure> with <img itemprop="image"> + <figcaption class="sr-only">
-            RIGHT col: product info
-              <h1 itemprop="name"> — product name
-              <p> SKU / reference code
-              <p itemprop="offers" itemscope itemtype="https://schema.org/Offer"> — price
-              Size selector: <fieldset> + <legend> + radio inputs styled with peer-checked:
-              Colour selector: same pattern
-              Quantity: static <span> display (no JS needed)
-              "Add to cart" CTA: <a href="cart.html"> — primary button (min tap target: py-3 px-6)
-         3. Below the columns:
-            <section aria-labelledby="description-heading">
-              <h2 id="description-heading">Description</h2>
-              Materials, care instructions, recommended use, country of origin
-         4. Related products:
-            <section aria-labelledby="related-heading">
-              <h2 id="related-heading">You may also like</h2>
-              3 product cards linking to product.html
-    -->
+    <nav aria-label="Fil d'Ariane" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+      <ol class="flex items-center gap-2 text-sm text-stone-500 list-none p-0 m-0" role="list">
+        <li><a href="index.html" class="hover:text-amber-700 transition-colors duration-200">Accueil</a></li>
+        <li aria-hidden="true" class="text-stone-400">/</li>
+        <li><a href="catalog.html" class="hover:text-amber-700 transition-colors duration-200">Catalogue</a></li>
+        <li aria-hidden="true" class="text-stone-400">/</li>
+        <li class="text-stone-900 font-medium" aria-current="page">Ivory Crepe Midi Dress</li>
+      </ol>
+    </nav>
+
+    <article itemscope itemtype="https://schema.org/Product" class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <figure class="bg-white rounded-lg overflow-hidden shadow-sm">
+        <img
+          itemprop="image"
+          src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&h=960&fit=crop&q=80"
+          alt="Robe midi en crêpe ivoire, coupe ajustée, col V"
+          class="w-full h-full object-cover"
+          width="800"
+          height="960"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <figcaption class="sr-only">Ivory Crepe Midi Dress by Maison Lumiere, front view.</figcaption>
+      </figure>
+
+      <div class="bg-white rounded-lg shadow-sm p-6 sm:p-8">
+        <p class="text-stone-500 text-sm mb-2">Maison Lumiere</p>
+        <h1 itemprop="name" class="font-serif text-3xl sm:text-4xl text-stone-900 mb-4">Ivory Crepe Midi Dress</h1>
+
+        <p class="text-stone-400 text-sm mb-4">Ref: <span itemprop="sku">ML-DRS-001</span></p>
+
+        <p itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mb-8">
+          <meta itemprop="priceCurrency" content="EUR" />
+          <link itemprop="availability" href="https://schema.org/InStock" />
+          <span itemprop="price" class="text-amber-700 font-semibold text-2xl">€189.00</span>
+        </p>
+
+        <fieldset class="border-0 p-0 m-0 mb-8">
+          <legend class="text-sm font-medium text-stone-700 mb-3">Taille</legend>
+          <div class="flex flex-wrap gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value="XS" class="sr-only peer" />
+              <span class="block peer-checked:bg-stone-900 peer-checked:text-white border border-stone-300 text-stone-700 text-sm px-3 py-1.5 rounded hover:border-stone-900 transition-colors duration-200 select-none">
+                XS
+              </span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value="S" class="sr-only peer" />
+              <span class="block peer-checked:bg-stone-900 peer-checked:text-white border border-stone-300 text-stone-700 text-sm px-3 py-1.5 rounded hover:border-stone-900 transition-colors duration-200 select-none">
+                S
+              </span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value="M" class="sr-only peer" checked />
+              <span class="block peer-checked:bg-stone-900 peer-checked:text-white border border-stone-300 text-stone-700 text-sm px-3 py-1.5 rounded hover:border-stone-900 transition-colors duration-200 select-none">
+                M
+              </span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value="L" class="sr-only peer" />
+              <span class="block peer-checked:bg-stone-900 peer-checked:text-white border border-stone-300 text-stone-700 text-sm px-3 py-1.5 rounded hover:border-stone-900 transition-colors duration-200 select-none">
+                L
+              </span>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="size" value="XL" class="sr-only peer" />
+              <span class="block peer-checked:bg-stone-900 peer-checked:text-white border border-stone-300 text-stone-700 text-sm px-3 py-1.5 rounded hover:border-stone-900 transition-colors duration-200 select-none">
+                XL
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <p class="text-sm text-stone-700 mb-8">Quantity: <span class="font-medium">1</span></p>
+
+        <a href="cart.html" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200">
+          Add to cart
+        </a>
+      </div>
+    </article>
+
+    <section aria-labelledby="description-heading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h2 id="description-heading" class="font-serif text-3xl text-stone-900 mb-8">Description</h2>
+      <div class="bg-white rounded-lg shadow-sm p-6 sm:p-8 space-y-3 text-stone-600 leading-relaxed">
+        <p>
+          The Ivory Crepe Midi Dress (€189.00, ref. ML-DRS-001) is crafted from 100% crêpe fabric in France, fully lined, and finished with a concealed zip closure.
+          Maison Lumiere applies Parisian tailoring references and responsible manufacturing controls to this tailored V-neck construction.
+        </p>
+        <p>The garment is built with clean seam finishing and a structured waist line to support repeat wear across formal and occasion use.</p>
+        <ul class="list-disc list-inside space-y-1 text-stone-600 text-sm border-t border-stone-200 pt-4 mt-2">
+          <li>Fabric composition: 100% crêpe</li>
+          <li>Lining: fully lined interior</li>
+          <li>Closure type: concealed zip closure</li>
+          <li>Care instructions: dry clean only</li>
+          <li>Country of origin: made in France</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="related-heading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h2 id="related-heading" class="font-serif text-3xl text-stone-900 mb-8">You may also like</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
+          <a href="product.html" aria-label="Voir Satin Slip Dress — 165 €">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=480&fit=crop&q=80" alt="Robe satinée champagne, coupe fluide et fines bretelles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-serif text-stone-900 text-lg">Satin Slip Dress</h3>
+              <p class="text-stone-500 text-sm mt-1">Champagne · XS-XL</p>
+              <p class="mt-2 font-semibold text-amber-700">165 €</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
+          <a href="product.html" aria-label="Voir Linen Belted Dress — 172 €">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=480&fit=crop&q=80" alt="Robe ceinturée en lin beige, manches courtes et coupe midi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-serif text-stone-900 text-lg">Linen Belted Dress</h3>
+              <p class="text-stone-500 text-sm mt-1">Sand · S-XL</p>
+              <p class="mt-2 font-semibold text-amber-700">172 €</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
+          <a href="product.html" aria-label="Voir Tailored Evening Dress — 214 €">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=480&fit=crop&q=80" alt="Robe de soirée noire, coupe ajustée et encolure élégante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="480" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-serif text-stone-900 text-lg">Tailored Evening Dress</h3>
+              <p class="text-stone-500 text-sm mt-1">Noir · XS-L</p>
+              <p class="mt-2 font-semibold text-amber-700">214 €</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
 
   </main>
   <!-- END PAGE CONTENT -->
