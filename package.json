@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "French clothing brand e-commerce prototype",
   "scripts": {
-    "build": "tailwindcss --config ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css --minify",
-    "watch": "tailwindcss --config ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css --watch"
+    "build": "tailwindcss --config ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./project/tailwind/output.css --minify",
+    "watch": "tailwindcss --config ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./project/tailwind/output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0"
