@@ -196,15 +196,240 @@
        ============================================================ -->
   <main id="main-content" class="flex-1 pb-[calc(6.5rem+env(safe-area-inset-bottom))] md:pb-0">
 
-   
-    <!-- TODO (index.html — Home page):
-         Sections to build:
-         1. Hero: <section aria-labelledby="hero-heading"> — full-viewport image, h1 tagline, CTA to catalog.html
-         2. New arrivals: <section aria-labelledby="arrivals-heading"> — h2, horizontal scroll of product cards on mobile, grid on desktop
-         3. Best sellers: <section aria-labelledby="sellers-heading"> — h2, same card pattern
-         Each product card = <article> with an <h3> product name
-         Schema.org: already included above (WebSite + Organization)
-    -->
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section aria-labelledby="hero-heading" class="relative flex items-center justify-center min-h-screen overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&h=900&fit=crop&q=80"
+        alt="Woman in an elegant camel coat walking on a sunny Parisian street"
+        class="absolute inset-0 w-full h-full object-cover"
+        width="1600"
+        height="900"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-stone-900/55"></div>
+      <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <p class="text-amber-400 text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+          <span data-i18n="home.season">Spring — Summer Collection</span>
+        </p>
+        <h1 id="hero-heading" class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+          <span data-i18n="home.tagline">Parisian Fashion, Reimagined</span>
+        </h1>
+        <p class="text-stone-200 text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+          <span data-i18n="home.heroSubtitle">Capsule collections for women and men. Premium materials, responsible craftsmanship, Parisian spirit.</span>
+        </p>
+        <a href="catalog.html" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium px-8 py-4 rounded transition-colors duration-200 text-base">
+          <span data-i18n="home.heroCta">Discover the Collection</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NEW ARRIVALS SECTION
+         ============================================================ -->
+    <section aria-labelledby="arrivals-heading" class="py-16 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between mb-8">
+          <h2 id="arrivals-heading" class="font-serif text-3xl sm:text-4xl text-stone-900" data-i18n="home.arrivals">New Arrivals</h2>
+          <a href="catalog.html" class="text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors duration-200 hidden sm:block" data-i18n="home.viewAll">View all →</a>
+        </div>
+        <div class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:pb-0">
+
+          <!-- Card 1: Robe Midi Crêpe Ivoire -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto">
+            <a href="product.html" aria-label="View Robe Midi Crêpe Ivoire — 245 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&h=480&fit=crop&q=80"
+                  alt="Ivory crepe midi dress, fitted cut, round neckline, long sleeves"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card1Name">Ivory Crêpe Midi Dress</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card1Meta">Ivory · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">245 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2: Blazer Structuré Camel -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto">
+            <a href="product.html" aria-label="View Blazer Structuré Camel — 320 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=480&fit=crop&q=80"
+                  alt="Structured camel wool blazer, straight cut, notched lapels, two buttons"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card2Name">Structured Camel Blazer</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card2Meta">Camel · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">320 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3: Pantalon Large Flanelle — image replaced (prev. 404) -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto">
+            <a href="product.html" aria-label="View Pantalon Large Flanelle — 185 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=480&fit=crop&q=80"
+                  alt="Wide-leg grey flannel trousers, high waist, flowing drape"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card3Name">Wide-Leg Flannel Trousers</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card3Meta">Grey · 34 36 38 40 42</p>
+                <p class="mt-2 font-semibold text-amber-700">185 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4: Chemise Lin Blanc Cassé -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto">
+            <a href="product.html" aria-label="View Chemise Lin Blanc Cassé — 135 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=480&fit=crop&q=80"
+                  alt="Off-white linen shirt, classic collar, relaxed fit, button cuffs"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card4Name">Off-White Linen Shirt</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card4Meta">Off-white · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">135 €</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+        <div class="mt-8 text-center sm:hidden">
+          <a href="catalog.html" class="inline-block border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium px-6 py-3 rounded transition-colors duration-200" data-i18n="home.viewArrivals">View all new arrivals</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BEST SELLERS SECTION
+         ============================================================ -->
+    <section aria-labelledby="sellers-heading" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between mb-8">
+          <h2 id="sellers-heading" class="font-serif text-3xl sm:text-4xl text-stone-900" data-i18n="home.sellers">Best Sellers</h2>
+          <a href="catalog.html" class="text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors duration-200 hidden sm:block" data-i18n="home.viewAll">View all →</a>
+        </div>
+        <div class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:pb-0">
+
+          <!-- Card 1: Manteau Cachemire Taupe — image replaced (prev. 404) -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto border border-stone-100">
+            <a href="product.html" aria-label="View Manteau Cachemire Taupe — 590 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=480&fit=crop&q=80"
+                  alt="Long taupe cashmere coat, straight cut, shawl collar, tie belt"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card5Name">Taupe Cashmere Coat</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card5Meta">Taupe · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">590 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2: Robe Portefeuille Bordeaux -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto border border-stone-100">
+            <a href="product.html" aria-label="View Robe Portefeuille Bordeaux — 210 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=480&fit=crop&q=80"
+                  alt="Bordeaux wrap dress in crepe, crossover V-neckline, tie waist, midi length"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card6Name">Bordeaux Wrap Dress</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card6Meta">Bordeaux · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">210 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3: Jean Droit Indigo -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto border border-stone-100">
+            <a href="product.html" aria-label="View Jean Droit Indigo — 165 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=480&fit=crop&q=80"
+                  alt="Straight-cut indigo denim jeans, mid-rise, slim fit, 5 pockets"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card7Name">Straight Indigo Jeans</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card7Meta">Indigo · 34 36 38 40 42</p>
+                <p class="mt-2 font-semibold text-amber-700">165 €</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4: Pull Laine Mérinos Crème -->
+          <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group flex-none w-64 sm:w-72 snap-start lg:w-auto border border-stone-100">
+            <a href="product.html" aria-label="View Pull Laine Mérinos Crème — 195 €">
+              <div class="relative overflow-hidden h-72">
+                <img
+                  src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=480&fit=crop&q=80"
+                  alt="Cream merino wool sweater, round neckline, slightly oversized fit, fine knit"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  width="400"
+                  height="480"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h3 class="font-serif text-stone-900 text-lg leading-snug" data-i18n="home.card8Name">Cream Merino Sweater</h3>
+                <p class="text-stone-500 text-sm mt-1" data-i18n="home.card8Meta">Cream · XS S M L XL</p>
+                <p class="mt-2 font-semibold text-amber-700">195 €</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+        <div class="mt-8 text-center sm:hidden">
+          <a href="catalog.html" class="inline-block border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium px-6 py-3 rounded transition-colors duration-200" data-i18n="home.viewSellers">View all best sellers</a>
+        </div>
+      </div>
+    </section>
 
   </main>
   <!-- END PAGE CONTENT -->
