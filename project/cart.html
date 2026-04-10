@@ -154,50 +154,45 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Cart Items Section -->
-        <section class="lg:col-span-2">
+        <section class="lg:col-span-2 w-full">
           <h1 class="font-serif text-3xl sm:text-4xl text-stone-900 mb-8" data-i18n="cart.heading">Mon Panier</h1>
           <ul class="space-y-6" role="list" aria-label="Articles dans le panier" data-i18n-attr="aria-label: cart.aria">
-            <!-- Cart Item 1 -->
-            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
-              <!-- Image -->
-              <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product1.alt" alt="Chemise blanche classique, taille M, blanc" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+            <!-- Cart Item 1: Classic White Shirt -->
+            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-[80px_1fr_100px_120px_100px] items-start sm:items-center gap-4 sm:gap-4">
+              <div class="flex items-center justify-center w-30 h-30 mx-auto mb-2 sm:mb-0">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=140&h=140&q=80" data-i18n-attr="alt: cart.product1.alt" alt="Chemise blanche classique, taille M, blanc" width="120" height="120" loading="lazy" class="w-30 h-30 object-cover rounded-lg border border-stone-200" />
               </div>
-              <!-- Product Info -->
-              <div class="min-w-0">
+              <div class="min-w-0 text-center sm:text-left mb-2 sm:mb-0">
                 <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product1.name">Chemise blanche classique</span>
                 <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product1.details">Taille : M · Couleur : Blanc</span>
               </div>
-              <!-- Price -->
-              <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n="cart.product1.price">49&nbsp;€</span>
+              <div class="text-center mb-2 sm:mb-0">
+                <span class="text-amber-700 font-extrabold text-2xl sm:text-2xl lg:text-3xl" data-i18n="cart.product1.price">49&nbsp;€</span>
               </div>
-              <!-- Quantity Controls -->
-              <div class="flex items-center justify-center">
+              <div class="flex items-center justify-center mb-2 sm:mb-0">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
                   <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">2</span>
                   <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.increase" aria-label="Augmenter la quantité" style="min-width:44px; min-height:44px;">+</button>
                 </div>
               </div>
-              <!-- Remove Button -->
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
-            <!-- Cart Item 2 -->
-            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
-              <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product2.alt" alt="Mocassins en cuir parisiens, taille 42, noir" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+            <!-- Cart Item 2: Parisian Leather Loafers -->
+            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-[80px_1fr_100px_120px_100px] items-start sm:items-center gap-4 sm:gap-4">
+              <div class="flex items-center justify-center w-30 h-30 mx-auto mb-2 sm:mb-0">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=140&h=140&q=80" data-i18n-attr="alt: cart.product2.alt" alt="Mocassins en cuir parisiens, taille 42, noir" width="120" height="120" loading="lazy" class="w-30 h-30 object-cover rounded-lg border border-stone-200" />
               </div>
-              <div class="min-w-0">
+              <div class="min-w-0 text-center sm:text-left mb-2 sm:mb-0">
                 <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product2.name">Mocassins en cuir parisiens</span>
                 <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product2.details">Taille : 42 · Couleur : Noir</span>
               </div>
-              <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n="cart.product2.price">120&nbsp;€</span>
+              <div class="text-center mb-2 sm:mb-0">
+                <span class="text-amber-700 font-extrabold text-2xl sm:text-2xl lg:text-3xl" data-i18n="cart.product2.price">120&nbsp;€</span>
               </div>
-              <div class="flex items-center justify-center">
+              <div class="flex items-center justify-center mb-2 sm:mb-0">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
                   <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">1</span>
@@ -205,22 +200,22 @@
                 </div>
               </div>
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
-            <!-- Cart Item 3 -->
-            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6 grid grid-cols-[80px_1fr_100px_120px_100px] items-center gap-4">
-              <div class="flex items-center justify-center w-20 h-20">
-                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=facearea&w=96&h=96&q=80" data-i18n-attr="alt: cart.product3.alt" alt="Pantalon en laine, taille 38, gris" width="80" height="80" loading="lazy" class="w-20 h-20 object-cover rounded-lg" />
+            <!-- Cart Item 3: Wool Trousers -->
+            <li class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-[80px_1fr_100px_120px_100px] items-start sm:items-center gap-4 sm:gap-4">
+              <div class="flex items-center justify-center w-30 h-30 mx-auto mb-2 sm:mb-0">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=facearea&w=140&h=140&q=80" data-i18n-attr="alt: cart.product3.alt" alt="Pantalon en laine, taille 38, gris" width="120" height="120" loading="lazy" class="w-30 h-30 object-cover rounded-lg border border-stone-200" />
               </div>
-              <div class="min-w-0">
+              <div class="min-w-0 text-center sm:text-left mb-2 sm:mb-0">
                 <span class="font-serif text-stone-900 text-lg font-semibold block truncate" data-i18n="cart.product3.name">Pantalon en laine</span>
                 <span class="text-stone-600 text-sm mt-1 block" data-i18n="cart.product3.details">Taille : 38 · Couleur : Gris</span>
               </div>
-              <div class="text-center">
-                <span class="text-amber-700 font-semibold" data-i18n="cart.product3.price">89&nbsp;€</span>
+              <div class="text-center mb-2 sm:mb-0">
+                <span class="text-amber-700 font-extrabold text-2xl sm:text-2xl lg:text-3xl" data-i18n="cart.product3.price">89&nbsp;€</span>
               </div>
-              <div class="flex items-center justify-center">
+              <div class="flex items-center justify-center mb-2 sm:mb-0">
                 <div class="flex items-center justify-center border border-stone-300 rounded-lg px-2 py-1 space-x-2 bg-stone-50">
                   <button class="px-3 py-1 text-stone-600 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded transition" data-i18n-attr="aria-label: cart.decrease" aria-label="Diminuer la quantité" style="min-width:44px; min-height:44px;">-</button>
                   <span class="font-semibold text-base text-center" style="min-width:32px;">3</span>
@@ -228,7 +223,7 @@
                 </div>
               </div>
               <div class="flex items-center justify-end">
-                <button class="text-red-600 text-sm hover:underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 rounded px-3 py-1" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
+                <button class="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2" data-i18n="cart.remove" data-i18n-attr="aria-label: cart.removeAria" aria-label="Retirer l'article" style="min-width:44px; min-height:44px;">Retirer</button>
               </div>
             </li>
           </ul>
@@ -250,12 +245,13 @@
               <span class="text-stone-600" data-i18n="cart.tax">Taxes</span>
               <span class="font-semibold text-stone-900">45&nbsp;€</span>
             </div>
+            <hr class="my-4 border-t border-stone-200" />
             <div class="font-serif font-semibold text-amber-700 text-lg mt-4 flex justify-between">
-              <span data-i18n="cart.total">Total</span>
-              <span>495&nbsp;€</span>
+              <span class="text-2xl sm:text-3xl lg:text-4xl" data-i18n="cart.total">Total</span>
+              <span class="text-2xl sm:text-3xl lg:text-4xl">495&nbsp;€</span>
             </div>
           </div>
-          <a href="checkout.html" class="w-full block bg-amber-700 hover:bg-amber-800 text-white font-medium px-6 py-3 rounded transition-colors duration-200 mt-6 text-center focus:outline-none focus:ring-2 focus:ring-amber-700" style="min-width:44px; min-height:44px;" data-i18n="cart.purchase">Finaliser l'achat</a>
+          <a href="checkout.html" class="w-full block bg-amber-700 hover:bg-amber-800 text-white font-medium px-4 py-3 sm:px-6 rounded transition-colors duration-200 mt-6 text-center focus:outline-none focus:ring-2 focus:ring-amber-700" style="min-width:44px; min-height:44px;" data-i18n="cart.purchase">Finaliser l'achat</a>
         </aside>
       </div>
     </div>
@@ -266,7 +262,7 @@
        SHARED FOOTER — DO NOT MODIFY
        ============================================================ -->
   <footer class="bg-stone-900 text-stone-300 mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         <div>
